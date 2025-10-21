@@ -1,0 +1,275 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a192f 0%, #1a2332 50%, #0a192f 100%);
+}
+
+/* Spline 3D Model - Absolute positioning, right-aligned */
+.hero-spline {
+  position: absolute !important;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) scale(1.1);
+  width: 55%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.hero-spline canvas {
+  background: transparent !important;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 4rem;
+}
+
+.hero-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.hero-content {
+  position: relative;
+  text-align: left;
+  padding: 2rem 0;
+  max-width: 600px;
+}
+
+.hero-greeting {
+  font-size: 3.5rem;
+  color: #ccd6f6;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #64ffda;
+  position: relative;
+}
+
+.hero-tagline {
+  font-size: 1.8rem;
+  color: #8892b0;
+  margin-bottom: 2.5rem;
+  min-height: 2.5rem;
+  font-weight: 400;
+}
+
+.cursor {
+  color: #64ffda;
+  animation: blink 1s infinite;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.cta-button {
+  background: transparent;
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #64ffda;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::before {
+  left: 0;
+}
+
+.cta-button:hover {
+  color: #0a192f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gradient-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: float 20s infinite ease-in-out;
+}
+
+.circle-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #64ffda, #4a9eff);
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #ff6b9d, #c94b4b);
+  bottom: 20%;
+  right: 15%;
+  animation-delay: 5s;
+}
+
+.circle-3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ffa500, #ff6347);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+  opacity: 0;
+}
+
+.fade-in-delay {
+  animation: fadeIn 1s ease-in 0.5s forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 1s ease-in 1s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-spline {
+    width: 60%;
+    transform: translateY(-50%) scale(1);
+  }
+
+  .hero-container {
+    padding: 0 2rem;
+  }
+
+  .hero-left {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-spline {
+    width: 70%;
+    opacity: 0.7;
+    transform: translateY(-50%) scale(0.9);
+  }
+
+  .hero-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-greeting {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.3rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .gradient-circle {
+    filter: blur(60px);
+  }
+
+  .circle-1, .circle-2, .circle-3 {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-spline {
+    width: 80%;
+    opacity: 0.6;
+    transform: translateY(-50%) scale(0.8);
+  }
+
+  .hero-container {
+    padding: 0 1.5rem;
+  }
+
+  .hero-greeting {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+}
