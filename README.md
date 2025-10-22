@@ -9,7 +9,7 @@ A modern, responsive personal portfolio website built with React, featuring smoo
 - Fixed positioning with smooth interactions
 - Fully responsive with adaptive sizing
 - Non-intrusive design that enhances visual appeal
-- See [SPLINE_INTEGRATION.md](./SPLINE_INTEGRATION.md) for details
+
 
 ### Header/Navigation Bar
 - **Fixed navigation** with smooth scrolling to all sections
