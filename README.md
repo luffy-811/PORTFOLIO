@@ -40,7 +40,7 @@ A modern, responsive personal portfolio website built with React, featuring smoo
 - Icons for visual appeal
 
 ### Projects Section
-- Grid layout of 6 featured project cards
+- Grid layout of 2 featured project cards
 - Each card includes:
   - Project title and description
   - Tech stack used (displayed as tags)
@@ -205,7 +205,6 @@ This ensures only your website can use your EmailJS service.
 ### Update Personal Information
 
 1. **Name and Tagline** - Edit `src/components/Hero.jsx`:
-   - Change "Your Name" to your actual name
    - Modify the `fullText` constant with your tagline
 
 2. **About Section** - Edit `src/components/About.jsx`:
@@ -219,7 +218,7 @@ This ensures only your website can use your EmailJS service.
    - Update additional skills badges
 
 4. **Projects** - Edit `src/components/Projects.jsx`:
-   - Update the `projects` array with your actual projects
+   - Update the `projects` array with your projects
    - Replace placeholder images and links
    - Customize tech stacks
 
@@ -275,9 +274,6 @@ This project is open source and available under the MIT License.
 
 ⭐ Star this repo if you found it helpful!
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
 ## Expanding the ESLint configuration
 
